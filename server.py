@@ -4,18 +4,22 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+#@app.route('/')
+#def index():
+#    return render_template('index.html')
+
+@app.route("/", methods=["GET"])
+def root():
+    return "welcome to ITIL exam"
+
+
+@app.route("/me", methods=["GET"])
+def name():
+    return "PRN= 230344223053, Name: Vaibhav Tayade, Phone: 8208264088"
+
+@app.route("/module", methods=["GET"])
 def index():
     return render_template('index.html')
-
-@app.route("/version", methods=["GET"])
-def root():
-    return "welcome to python flask app version1"
-
-
-@app.route("/name", methods=["GET"])
-def name():
-    return "Vaibhav Tayade"
 
 # run the application
 app.run(host="0.0.0.0", port=4000, debug=True)
