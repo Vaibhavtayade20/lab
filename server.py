@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def root():
-    return "welcome to ITIL exam v1"
+    return "welcome to ITIL exam"
 
 
 @app.route("/me", methods=["GET"])
