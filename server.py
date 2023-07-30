@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def root():
-    return "Welcome to the CICD Web"
+    return "Welcome to the CICD web version: 2"
 
 
 @app.route("/me", methods=["GET"])
